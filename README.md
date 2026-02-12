@@ -33,6 +33,9 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - **Projetos práticos**
 - **Seminários**
 
+## Aulas (links)
+- [Aula 01 — Introdução ao TypeScript](./aulas/01-introducao-typescript.md)
+
 ---
 
 ## Comunicação e dúvidas
