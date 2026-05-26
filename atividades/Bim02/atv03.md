@@ -2,10 +2,25 @@
 
 ## Objetivo da Atividade
 
-Aplicar os conceitos de **Herança**, **Sobreposição de Métodos** e **Polimorfismo** em TypeScript para estender um sistema de gerenciamento de empréstimos bancários. Os alunos criarão **6 novas modalidades de empréstimos**, cada uma com características únicas e cálculos especializados.
-
+Aplicar os conceitos de **Herança**, **Sobreposição de Métodos** e **Polimorfismo** em TypeScript para estender um sistema de gerenciamento de empréstimos bancários. 
 
 ---
+
+## Material do Projeto
+
+### **Baixe o Projeto Base Aqui:**
+
+- **[Emprestimo.zip](Emprestimo.zip)** - Projeto base com classes Emprestimo e EmprestimoTA
+
+**Conteúdo do ZIP:**
+- `Emprestimo.ts` - Classe base (não modifique)
+- `EmprestimoTA.ts` - Exemplo de herança (estude)
+- `ConjuntoEmprestimos.ts` - Gerenciador (não modifique)
+- `ConjuntoEmprestimosPoli.ts` - Programa principal
+- `tsconfig.json` - Configuração TypeScript
+
+---
+
 
 ## Estrutura Atual do Projeto
 
@@ -24,7 +39,7 @@ Aplicar os conceitos de **Herança**, **Sobreposição de Métodos** e **Polimor
 
 ---
 
-## Tarefas Obrigatórias
+## Tarefas 
 
 ### **Tarefa 1: Criar EmprestimoComDesconto**
 
@@ -42,6 +57,7 @@ Se é a última parcela:
   parcela = parcela - (parcela * percentualDesconto / 100)
 ```
 
+
 ---
 
 ### **Tarefa 2: Criar EmprestimoEducacional**
@@ -57,7 +73,7 @@ Crie uma subclasse para empréstimos com **juros reduzidos** ou **taxa zero** po
 
 ---
 
-### **Tarefa 3: Criar EmprestimoComJurosProgravél**
+### **Tarefa 3: Criar EmprestimoComJurosProgressivo**
 
 Crie uma subclasse com **juros que aumentam ao longo do tempo**.
 
@@ -67,8 +83,6 @@ Crie uma subclasse com **juros que aumentam ao longo do tempo**.
 - Adicionar método getter `getAcrescimoJuros(): number`
 - Sobrescrever `proximaParcela()`
 
-
----
 
 ---
 
@@ -91,7 +105,6 @@ Se temSeguroMoradia:
   parcela = parcela + 10 (seguro)
 ```
 
-
 ---
 
 ### **Tarefa 5: Criar EmprestimoVeiculo**
@@ -100,7 +113,7 @@ Crie uma subclasse para **financiamento de veículos** com cálculo diferenciado
 
 **Requisitos:**
 - Receber no construtor: `(saldo, parcelas, juros, tipo)` onde tipo é 'novo' ou 'usado'
-- Veículo novo: deprecia 15% no primeiro ano, depois 10% ao ano
+- Veículo novo: juros normais
 - Veículo usado: adiciona 1% aos juros (risco maior)
 - Se parcelas > 60: adicionar 2% de taxa administrativa
 - Adicionar método getter `getTipo(): string`
