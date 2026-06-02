@@ -34,12 +34,14 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - **Seminários**
 
 ## Aulas (links)
-- [Aula 01](./aulas/aula01/01-introducao-typescript.md)
-- [Aula 02](./aulas/aula02/02-introducao-typescript.md)
-- [Aula 03](./aulas/aula03/03-entrada-dados-typescript.md)
-- [Aula 04](./aulas/aula04/04-poo-typescript.md)
-- [Aula 05](./aulas/aula05/05-poo-typescript.md)
-- [Aula 06](./aulas/aula06/06-heranca-typescript.md)
+- [Aula 01 - Introdução Type Script](./aulas/aula01/01-introducao-typescript.md)
+- [Aula 02 - Introdução Type Script](./aulas/aula02/02-introducao-typescript.md)
+- [Aula 03 - Entrada Dados Type Script](./aulas/aula03/03-entrada-dados-typescript.md)
+- [Aula 04 - Introdução Orientação a Objetos](./aulas/aula04/04-poo-typescript.md)
+- [Aula 05 - Introdução Orientação a Objetos](./aulas/aula05/05-poo-typescript.md)
+- [Aula 06 - Herança](./aulas/aula06/06-heranca-typescript.md)
+- [Aula 06 - Classes Abstratas, Concretas e Interfaces](./aulas/aula07/07-classes-abstratas-concretas-typescript.md)
+
 
 
 ## Atividades (links)
