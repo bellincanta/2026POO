@@ -40,7 +40,8 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - [Aula 04 - Introdução Orientação a Objetos](./aulas/aula04/04-poo-typescript.md)
 - [Aula 05 - Introdução Orientação a Objetos](./aulas/aula05/05-poo-typescript.md)
 - [Aula 06 - Herança](./aulas/aula06/06-heranca-typescript.md)
-- [Aula 06 - Classes Abstratas, Concretas e Interfaces](./aulas/aula07/07-classes-abstratas-concretas-typescript.md)
+- [Aula 07 - Classes Abstratas, Concretas e Interfaces](./aulas/aula07/07-classes-abstratas-concretas-typescript.md)
+- [Aula 00 - Polimorfismo](./aulas/aula08/08-polimorfismo-typescript-atualizado.md)
 
 
 
