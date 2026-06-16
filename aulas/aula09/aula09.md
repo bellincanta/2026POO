@@ -1,11 +1,5 @@
 # Aula — Threads na prática, com Orientação a Objetos (Java e TypeScript)
 
-## Sumário
-
-- **1** — Processo, thread, concorrência e paralelismo
-- **2** — Relembrando orientação a objetos com a analogia da cozinha
-
----
 
 # 1. Processo, thread, concorrência e paralelismo
 
