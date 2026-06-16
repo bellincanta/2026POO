@@ -42,6 +42,7 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - [Aula 06 - Herança](./aulas/aula06/06-heranca-typescript.md)
 - [Aula 07 - Classes Abstratas, Concretas e Interfaces](./aulas/aula07/07-classes-abstratas-concretas-typescript.md)
 - [Aula 08 - Polimorfismo](./aulas/aula08/08-polimorfismo-typescript-atualizado.md)
+- [Aula 09 - Threads](./aulas/aula08/aula09.md)
 
 
 
