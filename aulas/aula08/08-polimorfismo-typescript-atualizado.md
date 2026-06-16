@@ -1,13 +1,6 @@
 # Aula 08 — Polimorfismo em TypeScript
 
-**Disciplina:** Programação Orientada a Objetos  
-**Tema:** Polimorfismo  
-**Linguagem:** TypeScript  
-**Duração:** 110 minutos  
-
----
-
-## 2. Conceito de polimorfismo
+## 1. Conceito de polimorfismo
 
 A palavra **polimorfismo** significa “muitas formas”.
 
@@ -27,7 +20,7 @@ Todos são `Animal`, mas cada um executa o método `emitirSom()` de uma forma di
 
 ---
 
-## 3. Exemplo 01 — Polimorfismo com herança
+## 2. Exemplo 01 — Polimorfismo com herança
 
 ### Arquivo
 
@@ -94,7 +87,7 @@ Isso é polimorfismo.
 
 ---
 
-## 4. Exemplo 02 — Lista com objetos polimórficos
+## 3. Exemplo 02 — Lista com objetos polimórficos
 
 No exemplo anterior, cada objeto foi chamado separadamente.
 
@@ -176,7 +169,7 @@ O TypeScript identifica qual é o objeto real em tempo de execução e chama o m
 
 ---
 
-## 5. Exemplo 03 — Polimorfismo com classe abstrata
+## 4. Exemplo 03 — Polimorfismo com classe abstrata
 
 Classes abstratas são muito úteis para trabalhar com polimorfismo, pois permitem definir um método obrigatório para as classes filhas.
 
@@ -269,7 +262,7 @@ Isso permite tratar todas as formas de maneira comum.
 
 ---
 
-## 6. Exemplo 04 — Polimorfismo com interfaces
+## 5. Exemplo 04 — Polimorfismo com interfaces
 
 Além de classes abstratas, também podemos usar interfaces para aplicar polimorfismo.
 
@@ -350,7 +343,7 @@ Mesmo sendo classes diferentes, todas podem ser tratadas como `Pagavel`.
 
 ---
 
-## 7. Exemplo 05 — Polimorfismo em um sistema simples
+## 6. Exemplo 05 — Polimorfismo em um sistema simples
 
 Agora vamos aplicar o conceito em um exemplo mais próximo de um sistema.
 
@@ -429,7 +422,7 @@ O comportamento correto será executado automaticamente.
 ---
 
 
-## 8. Exemplo 06 — Estudo de caso: empréstimos com polimorfismo
+## 7. Exemplo 06 — Estudo de caso: empréstimos com polimorfismo
 
 Neste exemplo, vamos analisar um pequeno sistema de empréstimos.
 
@@ -773,7 +766,7 @@ Neste exemplo, temos:
 
 ---
 
-## 9. Diferença entre herança e polimorfismo
+## 8. Diferença entre herança e polimorfismo
 
 Herança e polimorfismo são conceitos relacionados, mas não são a mesma coisa.
 
@@ -804,47 +797,8 @@ A chamada `emitirSom()` com comportamento diferente representa polimorfismo.
 
 ---
 
-## 10. Atividade prática em sala
 
-### Tema
-
-Sistema de personagens de jogo.
-
-### Descrição
-
-Crie um programa em TypeScript usando polimorfismo.
-
-O sistema deverá possuir uma classe abstrata chamada `Personagem`.
-
-A classe `Personagem` deverá ter:
-
-- atributo `nome`;
-- atributo `energia`;
-- método abstrato `atacar()`;
-- método concreto `exibirStatus()`.
-
-Depois, crie pelo menos três classes filhas:
-
-- `Guerreiro`;
-- `Mago`;
-- `Arqueiro`.
-
-Cada classe deverá implementar o método `atacar()` de forma diferente.
-
-### Requisitos
-
-O aluno deverá:
-
-1. criar uma classe abstrata `Personagem`;
-2. criar três classes filhas;
-3. sobrescrever o método `atacar()`;
-4. criar uma lista do tipo `Personagem[]`;
-5. percorrer a lista com `for...of`;
-6. chamar os métodos `exibirStatus()` e `atacar()` para cada personagem.
-
----
-
-## 11. Observação importante sobre nomes duplicados
+## 9. Observação importante sobre nomes duplicados
 
 Como o TypeScript pode acusar erro de identificador duplicado quando várias classes possuem o mesmo nome em arquivos diferentes, cada arquivo desta aula termina com:
 
