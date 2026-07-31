@@ -46,7 +46,7 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 
 
 ## Projeto (link)
-- [appEstoque](./atividades/projeto/appEstoque/projeto_estoque_login_dashboard.md)
+- [appEstoque](./projeto/appEstoque/projeto_estoque_login_dashboard.md)
 
 
 ## Atividades (links)
