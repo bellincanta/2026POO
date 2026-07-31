@@ -45,6 +45,9 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - [Aula 09 - Threads](./aulas/aula09/aula09.md)
 
 
+## Projeto (link)
+- [appEstoque](./atividades/projeto/appEstoque/projeto_estoque_login_dashboard.md)
+
 
 ## Atividades (links)
 - [Atv01 - 1º Bim](./atividades/Bim01/atv01.md)
