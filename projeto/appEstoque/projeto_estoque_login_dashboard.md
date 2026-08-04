@@ -63,7 +63,7 @@ frontend/src/
 ### 2.3 Tipos compartilhados (comentado)
 
 ```typescript
-// src/types/index.ts
+//src/types/index.ts
 
 export interface Usuario {
   id: number;
@@ -86,7 +86,7 @@ export interface Produto {
   id: number;
   nome: string;
   preco: number;
-  quantidade: number;// objeto aninhado, não apenas o ID
+  quantidade: number;
 }
 
 
@@ -104,7 +104,7 @@ export interface Movimentacao {
 ### 2.4 Dados mockados (comentado)
 
 ```typescript
-// src/api/mockData.ts
+//src/api/mockData.ts
 
 import { Categoria, Produto, Movimentacao, Usuario } from '../types';
 
@@ -142,7 +142,7 @@ export function gerarIdMovimentacao() {
 ### 2.5 Camada de API — versão MOCK, incluindo autenticação (comentada)
 
 ```typescript
-// src/api/api.ts
+//src/api/api.ts
 
 import {
   categorias,
@@ -273,7 +273,7 @@ export const movimentacaoApi = {
 ### 2.6 Contexto de Autenticação (comentado)
 
 ```tsx
-// src/context/AuthContext.tsx
+//src/context/AuthContext.tsx
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { Usuario } from '../types';
@@ -289,9 +289,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  // Ao carregar a página, tentamos recuperar um usuário já logado
-  // anteriormente (guardado no localStorage), para não deslogar o
-  // aluno toda vez que ele der F5.
+  
   const [usuario, setUsuario] = useState<Usuario | null>(() => {
     const salvo = localStorage.getItem('usuario');
     return salvo ? JSON.parse(salvo) : null;
@@ -324,5 +322,110 @@ export function useAuth() {
     throw new Error('useAuth deve ser usado dentro de um AuthProvider');
   }
   return context;
+}
+```
+
+### 2.7 Rota Protegida (comentada)
+
+```tsx
+//src/routes/ProtectedRoute.tsx
+
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+export function ProtectedRoute() {
+  const { logado } = useAuth();
+
+  if (!logado) {
+    
+    return <Navigate to="/login" replace />;
+  }
+
+  
+  return <Outlet />;
+}
+```
+
+### 2.8 Tela de Login (comentada)
+
+```tsx
+//src/pages/LoginPage.tsx
+
+import { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
+export function LoginPage() {
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
+  const [carregando, setCarregando] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setErro('');
+    setCarregando(true);
+
+    try {
+      await login(email, senha);
+      
+      navigate('/', { replace: true });
+    } catch (err: any) {
+      setErro(err.response?.data?.message ?? 'Erro ao fazer login');
+    } finally {
+      setCarregando(false);
+    }
+  }
+
+  return (
+    <div
+      style={{
+        maxWidth: 360,
+        margin: '80px auto',
+        padding: 24,
+        border: '1px solid #ccc',
+        borderRadius: 8,
+        fontFamily: 'sans-serif',
+      }}
+    >
+      <h2>Controle de Estoque</h2>
+      <p style={{ color: '#666', marginTop: -8 }}>Entre com suas credenciais</p>
+
+      <form onSubmit={handleSubmit}>
+        <div style={{ marginBottom: 12 }}>
+          <label>E-mail</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={{ width: '100%', padding: 8 }}
+            required
+          />
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          <label>Senha</label>
+          <input
+            type="password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            style={{ width: '100%', padding: 8 }}
+            required
+          />
+        </div>
+        {erro && <p style={{ color: 'red' }}>{erro}</p>}
+        <button type="submit" disabled={carregando} style={{ width: '100%', padding: 10 }}>
+          {carregando ? 'Entrando...' : 'Entrar'}
+        </button>
+      </form>
+
+      {/* Dica visível só para fins didáticos, pode remover depois */}
+      <p style={{ fontSize: 12, color: '#999', marginTop: 16 }}>
+        Use professor@ifpr.edu.br / 123456 (usuário mockado)
+      </p>
+    </div>
+  );
 }
 ```
