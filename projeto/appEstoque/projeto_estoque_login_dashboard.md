@@ -60,7 +60,7 @@ frontend/src/
 └── main.tsx
 ```
 
-### 2.3 Tipos compartilhados (comentado)
+### 2.3 Tipos compartilhados 
 
 ```typescript
 //src/types/index.ts
@@ -101,7 +101,7 @@ export interface Movimentacao {
 }
 ```
 
-### 2.4 Dados mockados (comentado)
+### 2.4 Dados mockados 
 
 ```typescript
 //src/api/mockData.ts
@@ -139,7 +139,7 @@ export function gerarIdMovimentacao() {
 }
 ```
 
-### 2.5 Camada de API — versão MOCK, incluindo autenticação (comentada)
+### 2.5 Camada de API — versão MOCK, incluindo autenticação 
 
 ```typescript
 //src/api/api.ts
@@ -270,7 +270,7 @@ export const movimentacaoApi = {
 };
 ```
 
-### 2.6 Contexto de Autenticação (comentado)
+### 2.6 Contexto de Autenticação 
 
 ```tsx
 //src/context/AuthContext.tsx
@@ -325,7 +325,7 @@ export function useAuth() {
 }
 ```
 
-### 2.7 Rota Protegida (comentada)
+### 2.7 Rota Protegida 
 
 ```tsx
 //src/routes/ProtectedRoute.tsx
@@ -346,7 +346,7 @@ export function ProtectedRoute() {
 }
 ```
 
-### 2.8 Tela de Login (comentada)
+### 2.8 Tela de Login 
 
 ```tsx
 //src/pages/LoginPage.tsx
