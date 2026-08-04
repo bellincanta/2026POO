@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-LoginPage.tsx
-ProtectedRoute.tsx
