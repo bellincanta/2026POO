@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext'
 import { LoginPage } from './pages/LoginPage'
 import { DashboardLayout } from './pages/DashboardLayout'
 import { DashboardHome } from './pages/DashboardHome'
+import { CategoriasPage } from './pages/CategoriasPage'
 import { ProtectedRoute } from './routes/ProtectedRoute'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<DashboardLayout />}>
               <Route index element={<DashboardHome />} />
+              <Route path="categorias" element={<CategoriasPage />} />
             </Route>
           </Route>
 

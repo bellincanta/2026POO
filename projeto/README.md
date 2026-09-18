@@ -1,0 +1,1 @@
+[⬇️ Baixar o projeto appEstoque](https://download-directory.github.io/?url=https://github.com/bellincanta/2026POO/tree/main/projeto/appEstoque)
