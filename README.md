@@ -56,6 +56,7 @@ Aplicação dos conceitos usando uma linguagem orientada a objetos.
 - [Atv02 - 2º Bim](./atividades/Bim02/atv02.md)
 - [Atv03 - 2º Bim - Google Class Room]
 - [Atv04 - 2º Bim](./atividades/Bim02/atv03.md)
+- [Atv01 - 3º Bim](./atividades/Bim03/atv01.md)
 
 
 ---
